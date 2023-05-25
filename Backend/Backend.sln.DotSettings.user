@@ -1,0 +1,16 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/home/ceavog/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/home/ceavog/.cache/JetBrains/Rider2022.2/resharper-host/temp/Rider/vAny/CoverageData/_Backend.298727902/Snapshot/snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7641c8a4_002Dca7b_002D47ab_002Da628_002D452ee78a99e4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from ProductsServiceTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::C5BD510C-7169-4C78-8EFB-F873255F403E::net6.0::Backend.TestProject.ProductsServiceTests&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::C5BD510C-7169-4C78-8EFB-F873255F403E::net6.0::Backend.TestProject.UserServiceTests.RefreshToken_ThrowsExceptionWhenUserDoesNotHaveValidRefreshToken&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::C5BD510C-7169-4C78-8EFB-F873255F403E::net6.0::Backend.TestProject.UserServiceTests&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+    &lt;ProjectFile&gt;C5BD510C-7169-4C78-8EFB-F873255F403E/d:Tests/f:CategoryServiceTests.cs&lt;/ProjectFile&gt;
+  &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String>
+	</wpf:ResourceDictionary>

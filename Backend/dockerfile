@@ -1,0 +1,38 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /app
+
+ENV ASPNETCORE_ENVIRONMENT=Development 
+
+COPY *.sln .
+COPY Backend.DAL_EF/*.csproj ./Backend.DAL_EF/
+COPY Backend.Repository/*.csproj ./Backend.Repository/
+COPY Backend.Services/*.csproj ./Backend.Services/
+COPY Backend.webapi/*.csproj ./Backend.webapi/
+COPY Backend.Shared/*.csproj ./Backend.Shared/
+
+RUN dotnet restore
+
+COPY Backend.DAL_EF/. ./Backend.DAL_EF/
+COPY Backend.Services/. ./Backend.Services/
+COPY Backend.webapi/. ./Backend.webapi/
+COPY Backend.Shared/. ./Backend.Shared/
+COPY Backend.Repository/. ./Backend.Repository/
+
+
+RUN dotnet build
+
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="${PATH}:/root/.dotnet/tools"
+
+WORKDIR /app/Backend.DAL_EF
+
+RUN dotnet ef database update
+
+WORKDIR /app
+
+RUN dotnet publish -c Release -o out
+
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 as runtime
+
+COPY --from=build /app/out ./
+ENTRYPOINT ["dotnet", "Backend.webapi.dll"]

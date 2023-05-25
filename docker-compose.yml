@@ -1,0 +1,59 @@
+# version: '3'
+
+# services:
+# #  frontend:
+# #    container_name: et_frontend
+# #    build: 
+# #      context: ./frontend
+# #      dockerfile: dockerfile
+# #    volumes:
+# #      - './frontend:/frontend'
+# #      - './frontend/node_modules'
+# #    ports:
+# #      - '3000:3000'
+
+  # mysql:
+    # container_name: db
+    # image: mysql
+    # ports:
+      # - '3306:3306'
+    # expose:
+      # - '3306'
+    # environment:
+      # - MYSQL_ALLOW_EMPTY_PASSWORD=1
+  # backend:
+    # container_name: et_backend
+    # build: 
+      # context: ./Backend
+      # dockerfile: dockerfile
+    # ports:
+      # - '8000:80'
+    # depends_on:
+      # - mysql
+      
+      
+version: '3'
+
+services:
+  mysql:
+    container_name: db
+    image: mysql
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+
+  backend:
+    container_name: et_backend
+    build: 
+      context: ./Backend
+      dockerfile: dockerfile
+    ports:
+      - '8000:80'
+    depends_on:
+      - mysql
+    # command: sh -c "dotnet ef database update --context ApplicationDbContext && dotnet Backend.webapi.dll"
+    command: sh -c "echo 'Hello, World!' && sleep 10s && echo 'Done'"
+

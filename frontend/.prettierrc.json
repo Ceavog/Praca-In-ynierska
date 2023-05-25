@@ -1,0 +1,19 @@
+{
+  "printWidth": 130,
+  "trailingComma": "all",
+  "importOrderSeparation": true,
+  "importOrder": [
+    "^react(.*)$",
+    "^@(.*)$",
+    "<THIRD_PARTY_MODULES>",
+    "^config|config/(.*)$",
+    "^assets|assets/(.*)$",
+    "^services|services/(.*)$",
+    "^modules|modules/(.*)$",
+    "^components|components/(.*)$",
+    "^contexts",
+    "^hooks|hooks/(.*)$",
+    "^utils|utils/(.*)$",
+    "^[./]"
+  ]
+}
